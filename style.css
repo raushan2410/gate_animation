@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    overflow: hidden;
+}
+
+div#first {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    /* background-color: #f3c5ff; */
+    background: repeating-linear-gradient(90deg,#4b4453 5%,#926c00 10%);
+    transition: all 3s ease-in-out;
+    /* transform-style: preserve-3d; */
+    /* perspective: 1000px; */
+    /* animation: animate1 2s ease-in-out ; */
+}
+div#second {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: repeating-linear-gradient(90deg,#4b4453 5%,#926c00 10%);
+    transition: all 3s ease-in-out;
+    /* transform-style: preserve-3d; */
+    /* perspective: 1000px; */
+    /* animation: animate2 2s ease-in-out ; */
+}
+
+div#first {
+    right: 50%;
+}
+div#second {
+    left: 50%;
+}
+#btn {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    z-index: 2;
+    margin-left: -3.5rem;
+    height: 3rem;
+    width: 7rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff8066;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 700;
+    animation: box-animate 3s linear  infinite  ;
+    background-image: url(./image/iconmonstr-lock-18-240.png) ;
+    background-position: center;
+    background-size: 2rem;
+    background-repeat: no-repeat;
+}
+#btn:hover {
+    background-image: url(./image/iconmonstr-lock-16-240.png);
+    background-size: 3rem;
+    top: 49.5vh;
+}
+
+
+@keyframes box-animate {
+    0% {
+        box-shadow: 0px 4px 2px blue;
+    }
+    25% {
+        box-shadow: -4px 0px 2px blue;
+    }
+    50% {
+        box-shadow: 0px -4px 2px blue;
+    }
+    75% {
+        box-shadow: 4px 0px 2px blue;
+    }
+    100% {
+        box-shadow: 0px 4px 2px blue;
+    }
+}
